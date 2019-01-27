@@ -20,8 +20,14 @@ I have used:
 - Create a Page with a controller
 - Dropdown with values of a class as options
 
-## Run development server
+## Start
 
+To install dependencies, in the folder of the project execute:
+```
+composer install
+```
+
+To run the development server:
 ```
 php bin/console server:run
 ```
