@@ -3,6 +3,7 @@
 {% block title %}Bands{% endblock %}
 
 {% block body %}
+    <div class="container">
     <h1>Bands</h1>
 
     <table class="table">
@@ -19,8 +20,8 @@
                 <td>{{ band.id }}</td>
                 <td>{{ band.name }}</td>
                 <td>
-                    <a href="{{ path('band_show', {'id': band.id}) }}">show</a>
-                    <a href="{{ path('band_edit', {'id': band.id}) }}">edit</a>
+                    <a class="btn btn-primary" href="{{ path('band_show', {'id': band.id}) }}">show</a>
+                    <a class="btn btn-primary" href="{{ path('band_edit', {'id': band.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -31,5 +32,8 @@
         </tbody>
     </table>
 
-    <a href="{{ path('band_new') }}">Create new</a>
+    <a class="btn btn-primary" href="{{ path('band_new') }}">Create new</a>    
+    <a class="btn btn-dark" href="{{ path('home') }}">Home</a>
+    </div>
+
 {% endblock %}
