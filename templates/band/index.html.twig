@@ -11,6 +11,7 @@
             <tr>
                 <th>Id</th>
                 <th>Name</th>
+                <th>Albums</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -19,6 +20,12 @@
             <tr>
                 <td>{{ band.id }}</td>
                 <td>{{ band.name }}</td>
+                <td>
+                    {% for album in band.albums %}
+                        <li>{{ album.name }}</li>
+                    {% endfor %}
+                    {# {{ band.albums }} #}
+                </td>
                 <td>
                     <a class="btn btn-primary" href="{{ path('band_show', {'id': band.id}) }}">show</a>
                     <a class="btn btn-primary" href="{{ path('band_edit', {'id': band.id}) }}">edit</a>
